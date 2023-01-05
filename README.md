@@ -97,6 +97,12 @@ To access your Google spreadsheet via the Google API used by the node applicatio
 
 ## Next Steps
 
+### Create your spreadsheet
+
+Create a Google a spreadsheet and on Row 1, Column 1, enter '**Date**' and on Row 1, Column 2, enter '**Event**' exactly as indicate (mind the capitalization).  The node application will be updating your spreadsheet expecting these headers.
+
+You can added bold and other highlighting to these headers, as well as column formatting, if you'd like.
+
 ### Share your spreadsheet with the Service Account
 
 ![Screenshot (66)](https://user-images.githubusercontent.com/25287498/210692163-7f3df625-d894-408f-aa07-25f2d0110ed5.png)
@@ -109,35 +115,46 @@ To access your Google spreadsheet via the Google API used by the node applicatio
 
 ### Get your spreadsheet Google ID
 
+Copy the spreadsheet's Google ID, which is the long alphanumeric string in your spreadsheet's URL.  You will need this in the next step.
 ![Screenshot (69)](https://user-images.githubusercontent.com/25287498/210692496-62d34429-fb66-419f-9c25-53c24c9418ce.png)
 
 
 ### Set up node application
 
-
-1) Copy the downloaded json file to your project directory
-
-2) Edit gsheet_server.js to provide your json file name and spreadsheet Google ID
+Edit the gsheet_server.js file in your project directory to provide your downloaded JSON key file name and spreadsheet Google ID that you copied above.  Be sure the key file name begins with an './' and ends with '.json'.
 ![Screenshot (70)](https://user-images.githubusercontent.com/25287498/210692794-36e49762-12cf-4bae-bc7b-2d73d837cabb.png)
 
+Save the gsheet_server.js file.
+
+Last reminder:  Be sure the JSON key file has been copied to your project directory!
+
+You can now run the app with the following command:
+```
+node gsheet_server.js
+```
+
+You will only see a message saying the server is listening on port 8089. If once you complete your Webrequestor setup and are sending requests, you will see them logged on the console to confirm the messages are being received from SmartThings.
+
+#### Setting up autostart
+You might want to make sure this app is automatically started each time your computer starts.  There are many ways to do this, so beyond the scope of this document.
+
+
 ## Set up Webrequestor
-1) Install webrequestor to your hub from my shared channel
+1) Have the Webrequestor driver installed to your hub from my [shared channel](https://bestow-regional.api.smartthings.com/invite/d429RZv8m9lo)
 2) Use the SmartThings mobile app to do an *Add Device / Scan for nearby devices*
 3) A new device will be created in your *No room assigned* room called Web Req Multi Master
+
 ### Configure Webrequestor requests
-These will be triggered by your automation routines to send an event to be posted to your spreadsheet.  You can configure up to 5.  If more are needed use the 'Create New Device' button in the Web Req Multi Master device.  You'll get another device created where you can create 5 more requests.
+These will be triggered by your automation routines to send an event to be posted to your spreadsheet.  You can configure up to 5 unique events in one Webrequestor device.  If more are needed use the 'Create New Device' button in the Web Req Multi Master device.  You'll get another device created where you can create 5 more requests.  You can create as many as you need.
 
 In device Settings, configure your web request(s) in one or more of the first 5 'slots':
-* **Web Request #n:** POST:http//\<IP address of the node app\>:8089
+* **Web Request #n:** POST:http://\<IP address of computer that will run the node app\>:8089.  For example:  POST:http://192.168.1.140:8089
 * **Web Request #n - Body:**  This is a JSON formatted string with one key called "event", with value of whatever you want to be posted to your spreadsheet.
     For example:  {"event":"door opened"}
 * **Web Request #n - Headers:**  Content-type=application/json
   
-You will define your automation routine THEN statements by selecting the webrequestor device and enabling the command "Pre-configured web request" and selecting the Request number you want sent.
+You will define your automation routine THEN statements by selecting the webrequestor device and enabling the command "Pre-configured web request" and selecting the Request number you configured.
 
+### Testing
 
-
-
-
-
-
+You can manually invoke your web requests from your SmartThings mobile app.  In the Web Req Multi Master device Controls screen, simply tap the 'Select web request to execute' button and select the request you want to send.  You should see a 200 HTTP Response Code shown, which indicates your HTTP request was successfully sent and received.  You should also see message displayed from the nodeJS app on your LAN computer indicating a POST request was received and displaying the JSON string.  If your message JSON was formatted properly, your spreadsheet should be updated with your event text.
