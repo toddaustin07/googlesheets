@@ -8,6 +8,9 @@
 ## How it works
 SmartThings sends an HTTP request to a nodeJS app running on your LAN computer whenever a specific event is triggered.  The HTTP message contains simple text indicating the event.  The nodeJS app then uses the Google API to update your spreadsheet with a timestamp and event text.
 
+![googlesheetapp](https://user-images.githubusercontent.com/25287498/210859975-fa6b6d6b-4120-4d55-a7f4-f41f9b38489c.png)
+
+
 To send the HTTP requests from SmartThings, an Edge driver called Webrequestor is used, which can be configured with multiple HTTP requests to be sent based on automation triggers.  So for example, you could create an automation routine that, any time a door contact opens or closes, triggers the HTTP request to be sent.  
 
 So there are three elements to this solution: the SmartThings driver that sends HTTP requests, the nodeJS app that receives them, and your Google spreadsheet that gets updated.  To make the spreadsheet accessible via the Google API, authentication must be set up in the Google Console.
@@ -112,7 +115,7 @@ You have now defined a project that includes access to the Google Sheets API.  T
 
 ![Screenshot (71)](https://user-images.githubusercontent.com/25287498/210696792-c1117ba2-4490-4109-87b1-8d5d1f23be4b.png)
 
-**Enter a Service account name.  The Service account ID field below will be automatically filled in for you. Copy and paste the email address shown to someplace where you can temporarily save it. Then click 'Create and Continue'...**
+**Enter a Service account name.  The Service account ID field below will be automatically filled in for you. Copy and paste the email address shown to someplace where you can temporarily save it. Then click 'CREATE AND CONTINUE'...**
 
 ![Screenshot (58)](https://user-images.githubusercontent.com/25287498/210709495-a0c99013-7d54-4160-af51-34bd50bafbbc.png)
 
@@ -138,9 +141,10 @@ You have now defined a project that includes access to the Google Sheets API.  T
 
 ![Screenshot (63)](https://user-images.githubusercontent.com/25287498/210691971-b38f58c1-ff71-4c71-baae-32834dd618af.png)
 
-**In the popup window, be sure that JSON Key type is selected and click Create...**
+**In the popup window, be sure that 'JSON' Key type is selected and click 'Create'...**
 
-![Screenshot (64)](https://user-images.githubusercontent.com/25287498/210691998-ef5dfafa-52e2-47d9-8303-8f626b6022cc.png)
+![Screenshot (64)](https://user-images.githubusercontent.com/25287498/210844961-d797e65a-bff7-42ec-9a0b-0d2c36a94785.png)
+
 
 **You will now get a popup window and a JSON key file will be automatically downloaded to your computer.  (In future steps, this JSON file must be copied to your project directory.)  Click 'close' on the popup...**
 
@@ -166,9 +170,15 @@ You can add bold text formatting and other highlighting to these headers, as wel
 
 ![Screenshot (66)](https://user-images.githubusercontent.com/25287498/210692163-7f3df625-d894-408f-aa07-25f2d0110ed5.png)
 
-**Here you must paste the saved email address into the list box.  UNcheck the Notify people option, and make sure the permission is set to 'Editor'.  Then click the blue 'Share' button.**
+**Here you must paste the saved Service account email address into the 'Add people and groups' input box...**
 
-![Screenshot (68)](https://user-images.githubusercontent.com/25287498/210692318-09ad9c32-9d83-44ff-b6c5-5343959172ec.png)
+![Screenshot (73)](https://user-images.githubusercontent.com/25287498/210847200-d72ede69-3f29-4abc-b628-257a08a18003.png)
+
+
+**UNcheck the 'Notify people' option, and make sure the permission is set to 'Editor'.  Then click the blue 'Share' button.**
+
+![Screenshot (72)](https://user-images.githubusercontent.com/25287498/210846474-a5df58be-fe57-4c35-92bc-64dadce98d0f.png)
+
 
 ### Get your spreadsheet Google ID
 
@@ -179,7 +189,7 @@ You can add bold text formatting and other highlighting to these headers, as wel
 
 ### Set up node application
 
-**Use your favorite editor to modify the gsheet_server.js file in your project directory to provide your downloaded JSON key file name and spreadsheet Google ID that you copied above.  Be sure the key file name begins with an './' and ends with '.json'.**
+**Use your favorite editor to modify the gsheet_server.js file in your project directory to provide your downloaded JSON key file name and spreadsheet Google ID that you copied above.  *Be sure the key file name begins with an './' and ends with '.json'.***
 
 ![Screenshot (70)](https://user-images.githubusercontent.com/25287498/210692794-36e49762-12cf-4bae-bc7b-2d73d837cabb.png)
 
