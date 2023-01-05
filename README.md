@@ -140,7 +140,7 @@ You have now defined a project that includes access to the Google Sheets API.  T
 
 Create a Google a spreadsheet and on Row 1, Column 1, enter '**Date**' and on Row 1, Column 2, enter '**Event**' exactly as indicated (mind the capitalization).  ***The node application updating your spreadsheet will be expecting these headers.***
 
-You can added bold and other highlighting to these headers, as well as column formatting, if you'd like.
+You can add bold text formatting and other highlighting to these headers, as well as column formatting, if you'd like.
 
 ### Share your spreadsheet with the Service Account
 
