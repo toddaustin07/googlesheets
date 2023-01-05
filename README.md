@@ -169,9 +169,13 @@ You can added bold and other highlighting to these headers, as well as column fo
 
 Now save the modified gsheet_server.js file.
 
-Last reminder:  Be sure the JSON key file has been copied to your project directory!
+Copy the JSON key file that was automatically downloaded (probably to your Downloads folder) to your project directory:
+```
+cd ~/myprojectdirectory
+cp ~/Downloads/xxxxxxxxxxxxxxxxxxx.json xxxxxxxxxxxxxxxxxxx.json
+```
 
-You can now run the app with the following command:
+You can now run the node app with the following command:
 ```
 node gsheet_server.js
 ```
@@ -187,9 +191,9 @@ You might want to make sure this app is automatically started each time your com
 3) A new device will be created in your *No room assigned* room called Web Req Multi Master
 
 ### Configure Webrequestor HTTP requests
-These HTTP requests will be triggered by your automation routines to send an event to be posted to your spreadsheet.  You can configure up to 5 unique events in one Webrequestor device.  If more are needed use the 'Create New Device' button in the Web Req Multi Master device.  You'll get another device created where you can create 5 more requests.  You can create as many as you need.
+These HTTP requests will be triggered by your automation routines to send an event to be posted to your spreadsheet.  You can configure up to 5 unique HTTP requests representing different events in one Webrequestor device.  If more are needed use the 'Create New Device' button in the Web Req Multi Master device Controls screen.  You'll get another device created where you can create 5 more requests.  You can create as many webrequestor devices as you need.
 
-In the new device Settings, configure your web request(s) in one or more of the first 5 numbered 'slots':
+In the webrequestor device Settings, configure your HTTP request(s) in one or more of the first 5 numbered 'slots':
 * **Web Request #n:**
   POST:http://\<IP address of computer that will run the node app\>:8089.  For example:
   ```
@@ -205,6 +209,9 @@ In the new device Settings, configure your web request(s) in one or more of the 
   ```
   Content-type=application/json
   ``` 
+
+If you set up multiple HTTP requests to represent different events, note that they will all have the same request URL and headers.  Only the request body will be unique with whatever event text you want to have posted to your spreadsheet.
+
 You will define your automation routine THEN statements by selecting the webrequestor device and enabling the command "Pre-configured web request" and selecting the Request number you configured.
 
 ### Testing
