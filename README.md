@@ -101,7 +101,8 @@ You have now defined a project that includes access to the Google Sheets API.  T
 
 **Enter a Service account name.  The Service account ID field below will be automatically filled in for you. Copy and paste the email address shown to someplace where you can temporarily save it. Then click 'Create and Continue'...**
 
-![Screenshot (58)](https://user-images.githubusercontent.com/25287498/210691775-b9fec809-b56b-409c-8f96-3aa10f74291c.png)
+![Screenshot (58)](https://user-images.githubusercontent.com/25287498/210709495-a0c99013-7d54-4160-af51-34bd50bafbbc.png)
+
 
 **On this next screen, declaring a Role is optional.  If you want you can select 'Owner' or just leave it.  Press 'CONTINUE'...**
 
@@ -109,14 +110,16 @@ You have now defined a project that includes access to the Google Sheets API.  T
 
 **Now back on the Credentials screen, your new Service Account is listed.  Click on the email address...**
 
-![Screenshot (60)](https://user-images.githubusercontent.com/25287498/210691842-dc0e8a2e-faae-4b98-9ec0-575bbe837d00.png)
+![Screenshot (60)](https://user-images.githubusercontent.com/25287498/210709663-20baa20f-04d9-4aa1-aaa6-b3dfce25bd58.png)
+
 
 
 #### Add Key
 
 **On the Service Account screen that is now showing, click on the 'KEYS' tab...**
 
-![Screenshot (61)](https://user-images.githubusercontent.com/25287498/210691886-7a26f589-ecaf-4e6e-a138-f2f2aebf3269.png)
+![Screenshot (61)](https://user-images.githubusercontent.com/25287498/210709833-47c03770-9cc6-4720-bea0-4cb2ed1b9af1.png)
+
 
 **Click 'ADD KEY' dropdown and then 'Create new key'...**
 
@@ -128,7 +131,8 @@ You have now defined a project that includes access to the Google Sheets API.  T
 
 **You will now get a popup window and a JSON key file will be automatically downloaded to your computer.  (In future steps, this JSON file must be copied to your project directory.)  Click 'close' on the popup...**
 
-![Screenshot (65)](https://user-images.githubusercontent.com/25287498/210692075-75a23021-7b8a-4c05-95fe-3c18d73b882c.png)
+![Screenshot (65)](https://user-images.githubusercontent.com/25287498/210710011-eedf1f5e-c9cd-42f8-a779-202697a8ffa4.png)
+
 
 
 ## Next Steps
@@ -143,7 +147,8 @@ You can added bold and other highlighting to these headers, as well as column fo
 
 **Recall the email ID you copied from the Google project screens.  You will use that in the next step...**
 
-![Screenshot (67)](https://user-images.githubusercontent.com/25287498/210692297-76e26c31-522a-493d-abcb-c9fd6041f3df.png)
+![Screenshot (67)](https://user-images.githubusercontent.com/25287498/210710198-5999485f-9622-49e2-b96a-a1389b7624e1.png)
+
 
 **Go to a browser tab with your spreadsheet loaded that you created above and click the green 'Share' button in the upper right...**
 
@@ -157,7 +162,7 @@ You can added bold and other highlighting to these headers, as well as column fo
 
 **Copy the spreadsheet's Google ID, which is the long alphanumeric string in your spreadsheet's URL.  You will need this in the next step.**
 
-![Screenshot (69)](https://user-images.githubusercontent.com/25287498/210692496-62d34429-fb66-419f-9c25-53c24c9418ce.png)
+![Screenshot (69)](https://user-images.githubusercontent.com/25287498/210710558-2f682fb8-d286-4eb0-9b27-56d87c2ae3d0.png)
 
 
 ### Set up node application
