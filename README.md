@@ -5,6 +5,17 @@
 * SmartThings Hub with [Webrequestor driver](https://github.com/toddaustin07/webrequestor)
 * An always-running LAN computer (e.g. Raspberry Pi) with internet access and **nodeJS** and **npm** installed 
 
+## How it works
+SmartThings sends an HTTP request to a nodeJS app running on your LAN computer whenever a specific event is triggered.  The HTTP message contains simple text indicating the event.  The nodeJS app then uses the Google API to update your spreadsheet with a timestamp and event text.
+
+To send the HTTP requests from SmartThings, an Edge driver called Webrequestor is used, which can be configured with multiple HTTP requests to be sent based on automation triggers.  So for example, you could create an automation routine that, any time a door contact opens or closes, triggers the HTTP request to be sent.  
+
+So there are three elements to this solution: the SmartThings driver that sends HTTP requests, the nodeJS app that receives them, and your Google spreadsheet that gets updated.  To make the spreadsheet accessible via the Google API, authentication must be set up in the Google Console.
+
+### Why can't an Edge driver update the Google spreadsheet directly?
+Edge drivers cannot access the Google API, so an intermediate nodeJS app is used as a bridge.
+
+
 ## First Setup Steps
 Create a project directory on your LAN computer.
 
@@ -21,7 +32,7 @@ The required node modules (express and bodyParser) will be installed to your pro
 Do not try to run the node application yet!  You must first set up authentication with Google.
 
 ## Google Authentication
-To access your Google spreadsheet via the Google API used by the node application, you must set up authentication in the Google console. If you carefully follow these steps it should take just a few minutes to do:
+To access your Google spreadsheet via the Google API used by the node application, you must set up authentication in the Google console. If you carefully follow these steps it should take just a few minutes to do, and is a one-time setup:
 
 * Go to the [Google Console](https://console.cloud.google.com) and login with your Google ID if needed.
 
