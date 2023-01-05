@@ -20,6 +20,7 @@ Edge drivers cannot access the Google API, so an intermediate nodeJS app is used
 Create a project directory on your LAN computer.
 
 Download the **gsheet_server.js** and **project.json** files from this repository to your project directory.
+  * For example, you can 'git clone' the whole repository or copy/paste the **raw** contents into a local editor and save
 
 Create a subdirectory within your project directory called **node_modules**
 
