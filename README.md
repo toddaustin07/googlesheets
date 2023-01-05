@@ -19,12 +19,24 @@ Edge drivers cannot access the Google API, so an intermediate nodeJS app is used
 ## First Setup Steps
 Create a project directory on your LAN computer.
 
-Download the **gsheet_server.js** and **project.json** files from this repository to your project directory.
-  * For example, you can 'git clone' the whole repository or copy/paste the **raw** contents into a local editor and save
+### Download the node application files
+You will need to download the gsheet_server.js and project.json files into your project directory.
 
-Create a subdirectory within your project directory called **node_modules**
+Options:
+  * Click on the file, then click the **Raw** button, then right-click the contents and do a Save As
+  * Use **wget** from a Linux terminal using the URLs of the raw files:
+    ```
+    wget https://raw.githubusercontent.com/toddaustin07/googlesheets/main/gsheet_server.js
+    wget https://raw.githubusercontent.com/toddaustin07/googlesheets/main/package.json
+    ```
+  * 'git clone' the whole repository
+    ```
+    git clone git@github.com:toddaustin07/googlesheets.git
+    ```
 
-Within your project directory (*not the node_modules subdirectory*), type this command:
+Now create a **subdirectory** within your project directory called **node_modules**.
+
+From your project directory (*not the node_modules subdirectory*), type this command:
 ```
 npm install
 ```
