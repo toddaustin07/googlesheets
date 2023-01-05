@@ -141,7 +141,7 @@ You have now defined a project that includes access to the Google Sheets API.  T
 
 ![Screenshot (63)](https://user-images.githubusercontent.com/25287498/210691971-b38f58c1-ff71-4c71-baae-32834dd618af.png)
 
-**In the popup window, be sure that 'JSON' Key type is selected and click 'Create'...**
+**In the popup window, be sure that 'JSON' Key type is selected and click 'CREATE'...**
 
 ![Screenshot (64)](https://user-images.githubusercontent.com/25287498/210844961-d797e65a-bff7-42ec-9a0b-0d2c36a94785.png)
 
