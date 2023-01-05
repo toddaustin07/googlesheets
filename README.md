@@ -45,7 +45,7 @@ The required node modules (express and google-spreadsheet) will be installed to 
 Do not try to run the node application yet!  You must first set up authentication with Google.
 
 ## Google Authentication
-To access your Google spreadsheet via the Google API used by the node application, you must set up authentication in the Google console. If you carefully follow these steps it should take just a few minutes to do, and is a one-time setup:
+For the node application to access your Google spreadsheet via the Google API, you must set up authentication in the Google console. If you carefully follow these steps it should take just a few minutes to do, and is a one-time setup:
 
 * Go to the [Google Console](https://console.cloud.google.com) and login with your Google ID if needed.
 
