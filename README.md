@@ -87,7 +87,7 @@ You have now defined a project that includes access to the Google Sheets API.  T
 
 ### Create Service Account Credentials
 
-**On the Google Sheets API window, click the blue 'Credentials' button...**
+**On the Google Sheets API window, click the blue 'Create Credentials' button...**
 
 ![Screenshot (54)](https://user-images.githubusercontent.com/25287498/210691184-4a0515c0-a1f3-43e1-a9dd-95e78e294290.png)
 
