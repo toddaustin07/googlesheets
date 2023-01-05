@@ -2,8 +2,8 @@
 /**********************************************************************/
 //MODIFY THE TWO ITEMS BELOW WITH YOUR GOOGLE KEYFILE AND GOOGLE DOC ID
 /**********************************************************************/
-const KEYFILE = './focus-electron-373720-e17f880e535a.json'
-const GOOGLEDOCID = '10lPneJc-zcPLAQqLJVrDRmIoMb_FptkHOFc3Krhak_Q'
+const KEYFILE = './xxxxxxxxxxxxxxxxxxxxxxxxxxxx.json'
+const GOOGLEDOCID = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 /**********************************************************************/
 
 
