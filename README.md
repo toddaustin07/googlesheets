@@ -7,8 +7,11 @@
 
 ## First Setup Steps
 Create a project directory on your LAN computer.
+
 Download the **gsheet_server.js** and **project.json** files from this repository to your project directory.
+
 Create a subdirectory within your project directory called **node_modules**
+
 Within your project directory (*not the node_modules subdirectory*), type this command:
 ```
 npm install
