@@ -69,7 +69,8 @@ To access your Google spreadsheet via the Google API used by the node applicatio
 ![Screenshot (56)](https://user-images.githubusercontent.com/25287498/210691649-2ceff1ad-8478-47d6-bfa7-47a869e00aea.png)
 
 
-![Screenshot (57)](https://user-images.githubusercontent.com/25287498/210691710-da94aa51-767a-482b-ac4a-e408a4e615f0.png)
+![Screenshot (71)](https://user-images.githubusercontent.com/25287498/210696792-c1117ba2-4490-4109-87b1-8d5d1f23be4b.png)
+
 
 ![Screenshot (58)](https://user-images.githubusercontent.com/25287498/210691775-b9fec809-b56b-409c-8f96-3aa10f74291c.png)
 
