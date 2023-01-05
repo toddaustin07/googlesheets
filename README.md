@@ -39,7 +39,7 @@ To access your Google spreadsheet via the Google API used by the node applicatio
 
 ![Screenshot (46)](https://user-images.githubusercontent.com/25287498/210690436-602c82ee-4e9b-41d8-87bb-87bf5f0f4f4e.png)
 
-**A notification box will appear on the right with your list of projects.  Click 'Select Project' for the one you just created...**
+**A notification box will appear on the right with your list of projects.  Click 'SELECT PROJECT' for the one you just created...**
 
 ![Screenshot (47)](https://user-images.githubusercontent.com/25287498/210690507-8ceb0bb2-b1a3-4254-8102-0808b19c3f11.png)
 
