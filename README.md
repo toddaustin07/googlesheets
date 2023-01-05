@@ -131,8 +131,7 @@ You have now defined a project that includes access to the Google Sheets API.  T
 
 **You will now get a popup window and a JSON key file will be automatically downloaded to your computer.  (In future steps, this JSON file must be copied to your project directory.)  Click 'close' on the popup...**
 
-![Screenshot (65)](https://user-images.githubusercontent.com/25287498/210710011-eedf1f5e-c9cd-42f8-a779-202697a8ffa4.png)
-
+![Screenshot (65)](https://user-images.githubusercontent.com/25287498/210711289-05aee625-1baa-4283-b58f-47e0c8dba93c.png)
 
 
 ## Next Steps
