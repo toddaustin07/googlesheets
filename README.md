@@ -27,7 +27,7 @@ Within your project directory (*not the node_modules subdirectory*), type this c
 ```
 npm install
 ```
-The required node modules (express and google-spreadsheet) will be installed to your project directory.
+The required node modules (express and google-spreadsheet) will be installed to your project directory's node_modules subdirectory.
 
 Do not try to run the node application yet!  You must first set up authentication with Google.
 
