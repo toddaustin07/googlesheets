@@ -29,7 +29,7 @@ Options:
     wget https://raw.githubusercontent.com/toddaustin07/googlesheets/main/gsheet_server.js
     wget https://raw.githubusercontent.com/toddaustin07/googlesheets/main/package.json
     ```
-  * 'git clone' the whole repository
+  * 'git clone' the whole repository (not generally recommended; power users only)
     ```
     git clone git@github.com:toddaustin07/googlesheets.git
     ```
