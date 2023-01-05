@@ -179,11 +179,21 @@ You might want to make sure this app is automatically started each time your com
 These HTTP requests will be triggered by your automation routines to send an event to be posted to your spreadsheet.  You can configure up to 5 unique events in one Webrequestor device.  If more are needed use the 'Create New Device' button in the Web Req Multi Master device.  You'll get another device created where you can create 5 more requests.  You can create as many as you need.
 
 In the new device Settings, configure your web request(s) in one or more of the first 5 numbered 'slots':
-* **Web Request #n:** POST:http://\<IP address of computer that will run the node app\>:8089.  For example:  POST:http://192.168.1.140:8089
-* **Web Request #n - Body:**  This is a JSON formatted string with one key called "event", with value of whatever you want to be posted to your spreadsheet.
-    For example:  {"event":"door opened"}
-* **Web Request #n - Headers:**  Content-type=application/json
-  
+* **Web Request #n:**
+  POST:http://\<IP address of computer that will run the node app\>:8089.  For example:
+  ```
+  POST:http://192.168.1.140:8089
+  ```
+* **Web Request #n - Body:**
+  * This is a JSON formatted string with one key called "event", with value of whatever you want to be posted to your spreadsheet.
+    For example:
+    ```
+    {"event":"door opened"}
+    ```
+* **Web Request #n - Headers:**
+  ```
+  Content-type=application/json
+  ``` 
 You will define your automation routine THEN statements by selecting the webrequestor device and enabling the command "Pre-configured web request" and selecting the Request number you configured.
 
 ### Testing
