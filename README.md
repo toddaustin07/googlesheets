@@ -95,7 +95,7 @@ You have now defined a project that includes access to the Google Sheets API.  T
 
 ![Screenshot (56)](https://user-images.githubusercontent.com/25287498/210691649-2ceff1ad-8478-47d6-bfa7-47a869e00aea.png)
 
-**Select 'Service Account'...**
+**Select 'Service account'...**
 
 ![Screenshot (71)](https://user-images.githubusercontent.com/25287498/210696792-c1117ba2-4490-4109-87b1-8d5d1f23be4b.png)
 
