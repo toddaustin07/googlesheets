@@ -66,7 +66,7 @@ To access your Google spreadsheet via the Google API used by the node applicatio
 
 ![Screenshot (52)](https://user-images.githubusercontent.com/25287498/210691118-f80d5f1e-ecd2-46c6-b21b-52f18a7006cd.png)
 
-**Then clilck the 'Enable' button...**
+**Then click the 'Enable' button...**
 
 ![Screenshot (53)](https://user-images.githubusercontent.com/25287498/210691148-920a4e9c-c7fb-4b1f-ad7f-cf0f008f32ed.png)
 
@@ -124,32 +124,39 @@ You have now defined a project that includes access to the Google Sheets API.  T
 
 ### Create your spreadsheet
 
-Create a Google a spreadsheet and on Row 1, Column 1, enter '**Date**' and on Row 1, Column 2, enter '**Event**' exactly as indicate (mind the capitalization).  The node application will be updating your spreadsheet expecting these headers.
+Create a Google a spreadsheet and on Row 1, Column 1, enter '**Date**' and on Row 1, Column 2, enter '**Event**' exactly as indicated (mind the capitalization).  ***The node application updating your spreadsheet will be expecting these headers.***
 
 You can added bold and other highlighting to these headers, as well as column formatting, if you'd like.
 
 ### Share your spreadsheet with the Service Account
 
-![Screenshot (66)](https://user-images.githubusercontent.com/25287498/210692163-7f3df625-d894-408f-aa07-25f2d0110ed5.png)
+**Recall the email ID you copied from the Google project screens.  You will use that in the next step...**
 
 ![Screenshot (67)](https://user-images.githubusercontent.com/25287498/210692297-76e26c31-522a-493d-abcb-c9fd6041f3df.png)
 
+**Go to a browser tab with your spreadsheet loaded that you created above and click the green 'Share' button in the upper right...**
+
+![Screenshot (66)](https://user-images.githubusercontent.com/25287498/210692163-7f3df625-d894-408f-aa07-25f2d0110ed5.png)
+
+**Here you must paste the saved email address into the list box.  UNcheck the Notify people option, and make sure the permission is set to 'Editor'.  Then click the blue 'Share' button.**
 
 ![Screenshot (68)](https://user-images.githubusercontent.com/25287498/210692318-09ad9c32-9d83-44ff-b6c5-5343959172ec.png)
 
-
 ### Get your spreadsheet Google ID
 
-Copy the spreadsheet's Google ID, which is the long alphanumeric string in your spreadsheet's URL.  You will need this in the next step.
+**Copy the spreadsheet's Google ID, which is the long alphanumeric string in your spreadsheet's URL.  You will need this in the next step.**
+
 ![Screenshot (69)](https://user-images.githubusercontent.com/25287498/210692496-62d34429-fb66-419f-9c25-53c24c9418ce.png)
 
 
 ### Set up node application
 
-Edit the gsheet_server.js file in your project directory to provide your downloaded JSON key file name and spreadsheet Google ID that you copied above.  Be sure the key file name begins with an './' and ends with '.json'.
+**Use your favorite editor to modify the gsheet_server.js file in your project directory to provide your downloaded JSON key file name and spreadsheet Google ID that you copied above.  Be sure the key file name begins with an './' and ends with '.json'.**
+
 ![Screenshot (70)](https://user-images.githubusercontent.com/25287498/210692794-36e49762-12cf-4bae-bc7b-2d73d837cabb.png)
 
-Save the gsheet_server.js file.
+
+Now save the modified gsheet_server.js file.
 
 Last reminder:  Be sure the JSON key file has been copied to your project directory!
 
@@ -158,21 +165,20 @@ You can now run the app with the following command:
 node gsheet_server.js
 ```
 
-You will only see a message saying the server is listening on port 8089. If once you complete your Webrequestor setup and are sending requests, you will see them logged on the console to confirm the messages are being received from SmartThings.
+You will see only one message saying the server is listening on port 8089. Once you complete your Webrequestor setup and are sending requests, you will see them logged on this console screen to confirm the messages are being received from SmartThings.
 
 #### Setting up autostart
-You might want to make sure this app is automatically started each time your computer starts.  There are many ways to do this, so beyond the scope of this document.
-
+You might want to make sure this app is automatically started each time your computer starts.  There are many ways to do this, so beyond the scope of this document.  Tackle that step AFTER you get things running and tested.
 
 ## Set up Webrequestor
-1) Have the Webrequestor driver installed to your hub from my [shared channel](https://bestow-regional.api.smartthings.com/invite/d429RZv8m9lo)
+1) Choose to have the Webrequestor driver installed to your hub from my [shared channel](https://bestow-regional.api.smartthings.com/invite/d429RZv8m9lo)
 2) Use the SmartThings mobile app to do an *Add Device / Scan for nearby devices*
 3) A new device will be created in your *No room assigned* room called Web Req Multi Master
 
-### Configure Webrequestor requests
-These will be triggered by your automation routines to send an event to be posted to your spreadsheet.  You can configure up to 5 unique events in one Webrequestor device.  If more are needed use the 'Create New Device' button in the Web Req Multi Master device.  You'll get another device created where you can create 5 more requests.  You can create as many as you need.
+### Configure Webrequestor HTTP requests
+These HTTP requests will be triggered by your automation routines to send an event to be posted to your spreadsheet.  You can configure up to 5 unique events in one Webrequestor device.  If more are needed use the 'Create New Device' button in the Web Req Multi Master device.  You'll get another device created where you can create 5 more requests.  You can create as many as you need.
 
-In device Settings, configure your web request(s) in one or more of the first 5 'slots':
+In the new device Settings, configure your web request(s) in one or more of the first 5 numbered 'slots':
 * **Web Request #n:** POST:http://\<IP address of computer that will run the node app\>:8089.  For example:  POST:http://192.168.1.140:8089
 * **Web Request #n - Body:**  This is a JSON formatted string with one key called "event", with value of whatever you want to be posted to your spreadsheet.
     For example:  {"event":"door opened"}
