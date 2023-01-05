@@ -1,33 +1,30 @@
 # Send SmartThings events to a Google Spreadsheet
 
 ## Pre-requisites
-* Google account
-* A google spreadsheet
-* SmartThings Hub
-* Webrequestor SmartThings Edge driver
-* An always-running LAN computer with nodeJS and npm installed (e.g. Raspberry Pi)
+* A Google account and a Google spreadsheet
+* SmartThings Hub with [Webrequestor driver](https://github.com/toddaustin07/webrequestor)
+* An always-running LAN computer (e.g. Raspberry Pi) with internet access and **nodeJS** and **npm** installed 
 
-## Setup
+## First Setup Steps
 Create a project directory on your LAN computer.
 Download the **gsheet_server.js** and **project.json** files from this repository to your project directory.
 Create a subdirectory within your project directory called **node_modules**
-Within your project directory, type this command:
+Within your project directory (*not the node_modules subdirectory*), type this command:
 ```
 npm install
 ```
 The required node modules (express and bodyParser) will be installed to your project directory.
 
-Do not try to run the node application yet.
+Do not try to run the node application yet!  You must first set up authentication with Google.
 
 ## Google Authentication
-To access your Google spreadsheet via the Google API used by the node application, you must set up authentication in the Google console. If you follow these steps it should take just a few minutes to do:
+To access your Google spreadsheet via the Google API used by the node application, you must set up authentication in the Google console. If you carefully follow these steps it should take just a few minutes to do:
 
 * Go to the [Google Console](https://console.cloud.google.com) and login with your Google ID if needed.
 
 ### Create a new project
 
 ![Screenshot (7)](https://user-images.githubusercontent.com/25287498/210690886-c713c9a0-54dd-4c5a-9ad6-209751050fc4.png)
-
 
 
 ![Screenshot (45)](https://user-images.githubusercontent.com/25287498/210690314-64fed90a-0576-4ec2-ae37-80393e84f7bf.png)
