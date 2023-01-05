@@ -69,7 +69,7 @@ For the node application to access your Google spreadsheet via the Google API, y
 
 **Your screen should now be showing your new project as the current project...**
 
-![Screenshot (48)](https://user-images.githubusercontent.com/25287498/210690543-916ce404-a213-417d-8271-1a32a6eb14b7.png)
+![Screenshot (48)](https://user-images.githubusercontent.com/25287498/210843834-6117e70f-4acf-4811-aadf-e56233afc872.png)
 
 
 ### Enable Google Sheets API
