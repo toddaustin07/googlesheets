@@ -251,8 +251,8 @@ You can manually invoke your web requests from your SmartThings mobile app.  In 
 ## Additional Info
 
 * If you create a new spreadsheet, it will have a new Google doc ID, so you will need to:
-  1) Share the spreadsheet using your Service account email address
-  2) Update the gsheet_server.js file in your project directory
+  1. Share the spreadsheet using your Service account email address
+  2. Update the gsheet_server.js file in your project directory
 
 * Any changes to either the Google doc ID or JSON key file downloaded from the Google console will require you to update the gsheet_server.js file in your project directory and restart the application:
   ```
