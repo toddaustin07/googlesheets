@@ -246,3 +246,16 @@ You will define your automation routine THEN statements by selecting the webrequ
 ### Testing
 
 You can manually invoke your web requests from your SmartThings mobile app.  In the Web Req Multi Master device Controls screen, simply tap the 'Select web request to execute' button and select the request you want to send.  You should see a 200 HTTP Response Code shown, which indicates your HTTP request was successfully sent and received.  You should also see a message displayed from the nodeJS app on your LAN computer indicating a received POST request along with the accompanying JSON string.  If your message JSON was formatted properly, and your spreadsheet has the expected headers, then your spreadsheet should be updated with your event text and a timestamp.
+
+
+## Additional Info
+
+* If you create a new spreadsheet, it will have a new Google doc ID, so you will need to:
+  1) Share the spreadsheet using your Service account email address
+  2) Update the gsheet_server.js file in your project directory
+
+* Any changes to either the Google doc ID or JSON key file downloaded from the Google console will require you to update the gsheet_server.js file in your project directory and restart the application:
+  ```
+  <Ctrl-c>
+  node gsheet_server.js
+  ```
