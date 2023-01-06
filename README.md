@@ -256,6 +256,9 @@ You can manually invoke your web requests from your SmartThings mobile app.  In 
 
 * Any changes to either the Google doc ID or JSON key file downloaded from the Google console will require you to update the gsheet_server.js file in your project directory and restart the application:
   ```
+  pi@raspberrypi:~/googlesheet $ node gsheet_server.js
+  Listening on port 8089
   <Ctrl-c>
+  nano gsheet_server.js
   node gsheet_server.js
   ```
