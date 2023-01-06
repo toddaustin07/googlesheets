@@ -232,6 +232,8 @@ In the webrequestor device Settings, configure your HTTP request(s) in one or mo
     ```
     {"event":"door opened"}
     ```
+  ***WARNING!*** Be sure to use only "straight" quotation marks, not the left or right style.  Your mobile device should allow you to select the specific quotes to use via its keyboard.  Copy/pasting can often bring with it the wrong style quotes, so beware.
+  
 * **Web Request #n - Headers:**
   ```
   Content-type=application/json
