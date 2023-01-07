@@ -34,7 +34,7 @@ Options:
     ```
   * 'git clone' the whole repository (not generally recommended; power users only)
     ```
-    git clone git@github.com:toddaustin07/googlesheets.git
+    git clone https://github.com/toddaustin07/googlesheets.git
     ```
 
 Now create a **subdirectory** within your project directory called **node_modules**.
