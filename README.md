@@ -159,6 +159,8 @@ Create a Google a spreadsheet and on Row 1, Column 1, enter '**Date**' and on Ro
 
 You can add bold text formatting and other highlighting to these headers, as well as column formatting, if you'd like.
 
+Be aware that the node app will update the first sheet it finds in your worksheet.  You can create and use other sheets within the worksheet, but SmartThings events will always be posted in the first sheet.  And the specified headers need to be in that first sheet.
+
 ### Share your spreadsheet with the Service Account
 
 **Recall the email ID you copied from the Google project screens.  You will use that in the next step...**
