@@ -233,10 +233,12 @@ In the webrequestor device Settings, configure your HTTP request(s) in one or mo
   POST:http://192.168.1.140:8089
   ```
 * **Web Request #n - Body:**
-  * This is a JSON formatted string with one key called "event", with value of whatever you want to be posted to your spreadsheet.
-    For example:
+  * This is a JSON formatted string with one key called "event", with value of whatever you want to be posted to your spreadsheet.  The value can be text, numeric, or boolean.
+    Examples:
     ```
     {"event":"door opened"}
+    {"event":42}
+    {"event":true}
     ```
   ***WARNING!*** Be sure to use only "straight" quotation marks, not the left or right style.  Your mobile device should allow you to select the specific quotes to use via its keyboard.  Copy/pasting can often bring with it the wrong style quotes, so beware.
   
@@ -247,11 +249,12 @@ In the webrequestor device Settings, configure your HTTP request(s) in one or mo
 
 If you set up multiple HTTP requests to represent different events, note that they will all have the same request URL and headers.  Only the request body will be unique with whatever event text you want to have posted to your spreadsheet.
 
-You will define your automation routine THEN statements by selecting the webrequestor device and enabling the command "Pre-configured web request" and selecting the Request number you configured.
-
 ### Testing
 
-You can manually invoke your web requests from your SmartThings mobile app.  In the Web Req Multi Master device Controls screen, simply tap the 'Select web request to execute' button and select the request you want to send.  You should see a 200 HTTP Response Code shown, which indicates your HTTP request was successfully sent and received.  You should also see a message displayed from the nodeJS app on your LAN computer indicating a received POST request along with the accompanying JSON string.  If your message JSON was formatted properly, and your spreadsheet has the expected headers, then your spreadsheet should be updated with your event text and a timestamp.
+You can manually invoke your web requests from your SmartThings mobile app.  In the Web Req Multi Master device Controls screen, simply tap the 'Select web request to execute' button and select the request you want to send.  You should see a '200' shown in the HTTP Response Code field, which indicates your HTTP request was successfully sent and received.  You should also see a message displayed from the nodeJS app on your LAN computer indicating it received the POST request along with the accompanying JSON string.  If your message body JSON was formatted properly, and your spreadsheet has the expected headers, then your spreadsheet should be updated with your event value and a timestamp.
+
+### Building Automations
+You will define your automation routine 'Then' actions by selecting the webrequestor device, choosing and enabling the command "Pre-configured web request" and selecting the Request you configured (Request #1, Request #2, Request #3, etc).
 
 ## Additional Info
 
