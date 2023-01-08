@@ -1,7 +1,7 @@
 # Send SmartThings events to a Google Spreadsheet
 
 ## Pre-requisites
-* A Google account and a Google spreadsheet
+* A Google account
 * SmartThings Hub with [Webrequestor driver](https://github.com/toddaustin07/webrequestor)
 * An always-running LAN computer (e.g. Raspberry Pi) with internet access and **nodeJS** and **npm** installed 
 
