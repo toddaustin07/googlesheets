@@ -23,7 +23,7 @@ Edge drivers cannot access the Google API, so an intermediate nodeJS app is used
 ### Limitations
 Using the Webrequestor Edge driver allows a very simple and accessible way to issue HTTP requests with Smartthings automations.  However, the requests are typically pre-configured, thus using this method is somewhat limited.  For example, there is no way to send dynamic, variable measurement values like temperature or energy using this method.  There is, for now, limited flexibilty in standard SmartThings automations for 'sending' or 'setting' variable values like this without a SmartApp.  Using the Rules engine, along with the ability to create dynamic HTTP requests with Webrequestor may allow some additional options for the more technically and creatively inclined.  
 
-See the *Addition Info* section for some other ideas and alternatives.
+See the *Additional Info* section for some other ideas and alternatives.
 
 ## First Setup Steps
 Create a project directory on your LAN computer.
