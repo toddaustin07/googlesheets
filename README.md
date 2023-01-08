@@ -6,7 +6,7 @@
 * An always-running LAN computer (e.g. Raspberry Pi) with internet access and **nodeJS** and **npm** installed 
 
 ## How it works
-A SmartThings automation sends an HTTP request to a nodeJS app running on your LAN computer whenever a specific event is triggered.  The HTTP message contains simple text indicating the event.  The nodeJS app then uses the Google API to update your spreadsheet with a timestamp and the event text.
+A SmartThings automation sends an HTTP request to a nodeJS app running on your LAN computer whenever a specific event is triggered.  The HTTP message contains simple value (text, numeric, boolean) indicating the event.  The nodeJS app then uses the Google API to update your spreadsheet with a timestamp and the event value.
 
 ![googlesheetapp](https://user-images.githubusercontent.com/25287498/210859975-fa6b6d6b-4120-4d55-a7f4-f41f9b38489c.png)
 
@@ -18,6 +18,8 @@ So there are three elements to this solution: the SmartThings driver that sends 
 ### Why can't an Edge driver update the Google spreadsheet directly?
 Edge drivers cannot access the Google API, so an intermediate nodeJS app is used as a bridge.
 
+### Limitations
+Using the Webrequestor Edge driver allows a very simple and accessible way to issue HTTP requests with Smartthings automations.  However, the requests are typically pre-configured, thus using this method is somewhat limited.  For example, you can't send variable measurement values like temperature or energy.  There is limited flexibilty in standard SmartThings automations for 'sending' or 'setting' variable values like this without a SmartApp.  Using the Rules engine, along with the ability to create dynamic HTTP requests with Webrequestor may allow some additional options for the more technically and creatively inclined.
 
 ## First Setup Steps
 Create a project directory on your LAN computer.
@@ -250,7 +252,6 @@ You will define your automation routine THEN statements by selecting the webrequ
 ### Testing
 
 You can manually invoke your web requests from your SmartThings mobile app.  In the Web Req Multi Master device Controls screen, simply tap the 'Select web request to execute' button and select the request you want to send.  You should see a 200 HTTP Response Code shown, which indicates your HTTP request was successfully sent and received.  You should also see a message displayed from the nodeJS app on your LAN computer indicating a received POST request along with the accompanying JSON string.  If your message JSON was formatted properly, and your spreadsheet has the expected headers, then your spreadsheet should be updated with your event text and a timestamp.
-
 
 ## Additional Info
 
