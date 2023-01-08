@@ -268,4 +268,8 @@ You can manually invoke your web requests from your SmartThings mobile app.  In 
   pi@raspberrypi: node gsheet_server.js
   ```
 
-## [Buy me a coffee!!](https://www.buymeacoffee.com/taustin)
+***
+***
+
+<a href="https://www.buymeacoffee.com/taustin" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
