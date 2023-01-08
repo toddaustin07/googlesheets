@@ -105,7 +105,8 @@ You have now defined a project that includes access to the Google Sheets API.  T
 
 **On the Google Sheets API window, click on 'Credentials' in the menu on the LEFT SIDE of the window.  (*Not* the blue 'CREATE CREDENTIALS' button in the upper right)...**
 
-![Screenshot (76)](https://user-images.githubusercontent.com/25287498/211174390-6b3da44d-648d-4480-a080-859b3a78e381.png)
+![Screenshot (78)](https://user-images.githubusercontent.com/25287498/211174652-011cb7ba-0aef-444f-a79e-e12bf9f813a3.png)
+
 
 **On the next screen click the blue '+CREATE CREDENTIALS' button...**
 
@@ -120,9 +121,10 @@ You have now defined a project that includes access to the Google Sheets API.  T
 ![Screenshot (58)](https://user-images.githubusercontent.com/25287498/210709495-a0c99013-7d54-4160-af51-34bd50bafbbc.png)
 
 
-**On this next screen, declaring a Role is optional.  If you want you can select 'Owner' or just leave it.  Press 'CONTINUE'...**
+**On this next screen, declaring a Role is optional.  If you want you can select 'Owner' or just leave it.  Press 'DONE'...**
 
-![Screenshot (59)](https://user-images.githubusercontent.com/25287498/210691807-cd9b71c4-a443-44a4-b4f0-fb39d02e4e12.png)
+![Screenshot (79)](https://user-images.githubusercontent.com/25287498/211174671-d2529606-5c13-4986-ba95-114702de849d.png)
+
 
 **Now back on the Credentials screen, your new Service Account is listed.  Click on the email address...**
 
