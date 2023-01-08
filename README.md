@@ -267,3 +267,5 @@ You can manually invoke your web requests from your SmartThings mobile app.  In 
   pi@raspberrypi: nano gsheet_server.js
   pi@raspberrypi: node gsheet_server.js
   ```
+
+## [Buy me a coffee!!](https://www.buymeacoffee.com/taustin)
