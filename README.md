@@ -15,11 +15,13 @@ To send the HTTP requests from SmartThings, an Edge driver called Webrequestor i
 
 So there are three elements to this solution: the SmartThings driver that sends HTTP requests, the nodeJS app that receives them, and your Google spreadsheet that gets updated.  To make the spreadsheet accessible via the Google API, authentication must be set up in the Google Console.
 
+Alternatively to Webrequestor, another driver that can be used to issue HTTP requests for spreadsheet updates is my [HTTP Devices driver](https://github.com/toddaustin07/HTTPDevices).  This driver allows for the creation of specific virtual device types (switch, dimmer, button, motion, contact, alarm) that also can be configured to send HTTP requests.
+
 ### Why can't an Edge driver update the Google spreadsheet directly?
 Edge drivers cannot access the Google API, so an intermediate nodeJS app is used as a bridge.
 
 ### Limitations
-Using the Webrequestor Edge driver allows a very simple and accessible way to issue HTTP requests with Smartthings automations.  However, the requests are typically pre-configured, thus using this method is somewhat limited.  For example, there is no way to send dynamic, variable measurement values like temperature or energy using this method.  There is, for now, limited flexibilty in standard SmartThings automations for 'sending' or 'setting' variable values like this without a SmartApp.  Using the Rules engine, along with the ability to create dynamic HTTP requests with Webrequestor may allow some additional options for the more technically and creatively inclined.
+Using the Webrequestor Edge driver allows a very simple and accessible way to issue HTTP requests with Smartthings automations.  However, the requests are typically pre-configured, thus using this method is somewhat limited.  For example, there is no way to send dynamic, variable measurement values like temperature or energy using this method.  There is, for now, limited flexibilty in standard SmartThings automations for 'sending' or 'setting' variable values like this without a SmartApp.  Using the Rules engine, along with the ability to create dynamic HTTP requests with Webrequestor may allow some additional options for the more technically and creatively inclined.  See the *Addition Info* section for some other ideas and alternatives.
 
 ## First Setup Steps
 Create a project directory on your LAN computer.
@@ -258,7 +260,7 @@ You can manually invoke your web requests from your SmartThings mobile app.  In 
 You will define your automation routine 'Then' actions by selecting the webrequestor device, choosing and enabling the command "Pre-configured web request" and selecting the Request you configured (Request #1, Request #2, Request #3, etc).
 
 ## Additional Info
-
+#### Change Management
 * If you create a new spreadsheet, it will have a new Google doc ID, so you will need to:
   1. Share the spreadsheet using your Service account email address
   2. Update the gsheet_server.js file in your project directory
@@ -272,6 +274,9 @@ You will define your automation routine 'Then' actions by selecting the webreque
   pi@raspberrypi: nano gsheet_server.js
   pi@raspberrypi: node gsheet_server.js
   ```
+  
+#### Ideas/Alternatives
+* Use the [HTTP Devices driver](https://github.com/toddaustin07/HTTPDevices) as an alternative to Webrequestor.  That driver allows you to create specific virtual device types including switch, button, dimmer, contact, motion, and alarm, which can each be configured with HTTP requests to be sent upon the respective device commands  A unique example would be that using the **dimmer** device, you can have a way to send a variable numeric value (0-100) to be posted to your spreadsheet.  Using some creative automation routines, this could provide a partial solution to the limitation of posting only static, preconfigured values.  
 
 ***
 ***
