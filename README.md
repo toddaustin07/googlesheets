@@ -62,7 +62,8 @@ For the node application to access your Google spreadsheet via the Google API, y
 
 **Click the 'NEW PROJECT' button...**
 
-![Screenshot (45)](https://user-images.githubusercontent.com/25287498/210690314-64fed90a-0576-4ec2-ae37-80393e84f7bf.png)
+![Screenshot (45)](https://user-images.githubusercontent.com/25287498/211177065-51b9689f-6f64-4f86-acfe-cb9251feddeb.png)
+
 
 **Enter a name for your project and click 'CREATE'...**
 
