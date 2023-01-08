@@ -6,7 +6,7 @@
 * An always-running LAN computer (e.g. Raspberry Pi) with internet access and **nodeJS** and **npm** installed 
 
 ## How it works
-SmartThings sends an HTTP request to a nodeJS app running on your LAN computer whenever a specific event is triggered.  The HTTP message contains simple text indicating the event.  The nodeJS app then uses the Google API to update your spreadsheet with a timestamp and event text.
+A SmartThings automation sends an HTTP request to a nodeJS app running on your LAN computer whenever a specific event is triggered.  The HTTP message contains simple text indicating the event.  The nodeJS app then uses the Google API to update your spreadsheet with a timestamp and the event text.
 
 ![googlesheetapp](https://user-images.githubusercontent.com/25287498/210859975-fa6b6d6b-4120-4d55-a7f4-f41f9b38489c.png)
 
