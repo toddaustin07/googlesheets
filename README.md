@@ -279,6 +279,7 @@ You will define your automation routine 'Then' actions by selecting the webreque
   
 #### Ideas/Alternatives
 * Use the [HTTP Devices driver](https://github.com/toddaustin07/HTTPDevices) as an alternative to Webrequestor.  That driver allows you to create specific virtual device types including switch, button, dimmer, contact, motion, and alarm, which can each be configured with HTTP requests to be sent upon the respective device commands  A unique example would be that using the **dimmer** device, you can have a way to send a variable numeric value (0-100) to be posted to your spreadsheet.  Using some creative automation routines, this could provide a partial solution to the limitation of posting only static, preconfigured values.  
+  * Under consideration:  adding a 'simple string' type device to the HTTP Devices driver, where a routine could set any text value that would then be posted to your spreadsheet.  This could allow for a more flexible 'logging' facility.
 
 ***
 ***
