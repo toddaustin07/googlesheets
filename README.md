@@ -240,11 +240,11 @@ In the webrequestor device Settings, configure your HTTP request(s) in one or mo
   POST:http://192.168.1.140:8089
   ```
 * **Web Request #n - Body:**
-  * This is a JSON formatted string with one key called "event", with value of whatever you want to be posted to your spreadsheet.  The value can be text, numeric, or boolean.
+  * This is a JSON formatted string with one required key called "event", with value of whatever you want to be posted to your spreadsheet.  The value can be text, numeric, or boolean.  A optional second key called "sheet" can be provided to specify the name of the sheet in your spreadsheet to update.  If no sheet is specified in the JSON, then the first sheet will be updated.
     Examples:
     ```
     {"event":"door opened"}
-    {"event":42}
+    {"sheet":"mysheet", "event":42}
     {"event":true}
     ```
   ***WARNING!*** Be sure to use only "straight" quotation marks, not the left or right style.  Your mobile device should allow you to select the specific quotes to use via its keyboard.  Copy/pasting can often bring with it the wrong style quotes, so beware.
