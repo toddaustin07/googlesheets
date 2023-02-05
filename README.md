@@ -1,5 +1,7 @@
 # Send SmartThings events to a Google Spreadsheet
 
+**02/05/23 UPDATE:**  Allow for sheet name to be included in JSON body.  If no sheet name provided, then first sheet in spreadsheet will be updated.
+
 ## Pre-requisites
 * A Google account
 * SmartThings Hub with [Webrequestor driver](https://github.com/toddaustin07/webrequestor)
